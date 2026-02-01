@@ -1,0 +1,214 @@
+header ul li:nth-of-type(5) {
+	text-decoration: overline;
+}
+
+h2 {
+	text-align: center;
+	font-size: 36px;
+	margin: 20px 0;
+	color: #333333;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.TorneosGrid {
+  width: 80%;
+  margin: 3% auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.TorneoCard {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.TorneoCard:hover {
+  transform: translateY(-8px);
+}
+
+.TorneoCard img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.TorneoCard h3 {
+  margin: 15px;
+  font-size: 22px;
+  color: var(--verde-snooker);
+}
+
+.TorneoCard p {
+  margin: 0 15px 15px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0 15px 15px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 20px;
+  color: white;
+}
+
+.badge.ranking {
+  background-color: #1e7f5c;
+}
+
+.badge.invitacion {
+  background-color: #f5c542;
+  color: #000;
+}
+
+video {
+	display: block;
+	margin: 2% auto;
+	max-width: 80%;
+	border: 5px solid #000000;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.Demo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+  height: 100px;
+  gap: 5%;
+}
+
+.Trigger.torneos {
+  font-size: 24px;
+}
+
+.BloqueInfo {
+  width: 85%;
+  margin: 3% auto;
+  background: #eaeaea;
+  padding: 25px;
+  border-left: 6px solid var(--verde-claro);
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+.ImagenesTorneos {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  margin: 3% 0;
+}
+
+.ImagenesTorneos img {
+  width: 25%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* Para tables */
+@media screen and (max-width: 768px) {
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .TorneosGrid {
+    width: 90%;
+    gap: 25px;
+  }
+
+  .TorneoCard h3 {
+    font-size: 20px;
+  }
+
+  .TorneoCard p {
+    font-size: 15px;
+  }
+
+  video {
+    max-width: 90%;
+  }
+
+  .BloqueInfo {
+    width: 90%;
+    font-size: 17px;
+    padding: 22px;
+  }
+
+  .ImagenesTorneos img {
+    width: 40%;
+  }
+}
+
+/* Para móviles */
+@media screen and (max-width: 480px) {
+
+  h2 {
+    font-size: 24px;
+    margin: 15px 0;
+  }
+
+  .TorneosGrid {
+    width: 95%;
+    gap: 20px;
+  }
+
+  .TorneoCard img {
+    height: 150px;
+  }
+
+  .TorneoCard h3 {
+    font-size: 18px;
+  }
+
+  .TorneoCard p {
+    font-size: 15px;
+  }
+
+  .badge {
+    font-size: 13px;
+  }
+
+  /* Video */
+  video {
+    max-width: 95%;
+    border-width: 3px;
+  }
+
+  /* Botones demo */
+  .Demo {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+    margin: 5% 0;
+  }
+
+  .Trigger {
+    font-size: 18px;
+  }
+
+  /* Bloques informativos */
+  .BloqueInfo {
+    width: 95%;
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  /* Imágenes */
+  .ImagenesTorneos {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ImagenesTorneos img {
+    width: 85%;
+  }
+}

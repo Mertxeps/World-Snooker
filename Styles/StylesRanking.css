@@ -1,0 +1,346 @@
+/* Marcar página activa */
+header ul li:nth-of-type(5) {
+  text-decoration: overline;
+}
+
+h2 {
+  text-align: center;
+  font-size: 36px;
+  margin: 30px 0;
+  color: #333;
+}
+
+.RankingGrid {
+  width: 80%;
+  margin: 3% auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.RankingCard {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.RankingCard:hover {
+  transform: translateY(-6px);
+}
+
+.posicion {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: var(--verde-snooker);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RankingCard h3 {
+  margin-top: 10px;
+  font-size: 22px;
+  color: var(--verde-snooker);
+}
+
+.RankingCard p {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+/* Destacar podio */
+.RankingCard.oro {
+  border: 3px solid gold;
+}
+
+.RankingCard.plata {
+  border: 3px solid silver;
+}
+
+.RankingCard.bronce {
+  border: 3px solid #cd7f32;
+}
+
+.FuncionamientoRanking {
+  width: 70%;
+  margin: 3% auto;
+  background: #f0f0f0;
+  padding: 25px 30px;
+  border-left: 6px solid var(--verde-claro);
+  border-radius: 8px;
+}
+
+.FuncionamientoRanking ul {
+  list-style: none;
+  font-size: 18px;
+}
+
+.FuncionamientoRanking li {
+  margin: 2% 0;
+  font-size: 18px;
+}
+
+.EliteGrid {
+  width: 60%;
+  margin: 2% auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.EliteGrid span {
+  background: var(--verde-snooker);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.TablaRanking {
+  width: 80%;
+  margin: 3% auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.FilaRanking {
+  display: grid;
+  grid-template-columns: 10% 40% 30% 20%;
+  padding: 15px 20px;
+  background: white;
+  font-size: 18px;
+}
+
+.FilaRanking:nth-child(even) {
+  background: #f2f2f2;
+}
+
+.FilaRanking.encabezado {
+  background: var(--verde-snooker);
+  color: white;
+  font-weight: bold;
+}
+
+.FilaRanking.elite span:last-child {
+  font-weight: bold;
+  color: var(--verde-claro);
+}
+
+.RankingRelacion {
+  width: 70%;
+  margin: 4% auto;
+  text-align: center;
+}
+
+.RankingRelacion p {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.BloqueTop16 {
+  width: 75%;
+  margin: 3% auto;
+  background: #fafafa;
+  padding: 30px;
+  border-left: 6px solid var(--verde-snooker);
+  border-radius: 8px;
+}
+
+.BloqueTop16 ul {
+  list-style: disc;
+  margin-left: 25px;
+  font-size: 18px;
+}
+
+.BloqueTop16 li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.FilaRanking.elite:nth-child(2) {
+  background: #fff9e6;
+}
+
+.FilaRanking.elite:nth-child(3) {
+  background: #f4f4f4;
+}
+
+.FilaRanking.elite:nth-child(4) {
+  background: #fdf0e6;
+}
+
+p:last-of-type {
+  margin-bottom: 3%;
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* Para tables */
+@media screen and (max-width: 768px) {
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .Justificado {
+    width: 90%;
+    font-size: 17px;
+  }
+
+  .RankingGrid {
+    width: 90%;
+    gap: 20px;
+  }
+
+  .RankingCard h3 {
+    font-size: 20px;
+  }
+
+  .RankingCard p {
+    font-size: 15px;
+  }
+
+  .TablaRanking {
+    width: 90%;
+  }
+
+  .FilaRanking {
+    grid-template-columns: 12% 38% 30% 20%;
+    font-size: 16px;
+    padding: 12px 15px;
+  }
+
+  .FuncionamientoRanking {
+    width: 85%;
+    padding: 22px;
+  }
+
+  .FuncionamientoRanking li {
+    font-size: 17px;
+  }
+
+  .BloqueTop16 {
+    width: 85%;
+    padding: 25px;
+  }
+
+  .BloqueTop16 li {
+    font-size: 17px;
+  }
+
+  .RankingRelacion {
+    width: 85%;
+  }
+}
+
+/* Para móviles */
+@media screen and (max-width: 480px) {
+
+  h2 {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+
+  .Justificado {
+    width: 95%;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* Cards ranking */
+  .RankingGrid {
+    width: 95%;
+    gap: 18px;
+  }
+
+  .RankingCard {
+    padding: 20px;
+  }
+
+  .RankingCard h3 {
+    font-size: 18px;
+  }
+
+  .RankingCard p {
+    font-size: 15px;
+  }
+
+  .posicion {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    top: -12px;
+    right: -12px;
+  }
+
+  /* Tabla ranking → formato vertical */
+  .TablaRanking {
+    width: 95%;
+  }
+
+  .FilaRanking {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    font-size: 15px;
+  }
+
+  .FilaRanking.encabezado {
+    display: none;
+  }
+
+  .FilaRanking span {
+    display: block;
+  }
+
+  .FilaRanking span::before {
+    font-weight: bold;
+    color: var(--verde-snooker);
+    margin-right: 5px;
+  }
+
+  .FilaRanking span:nth-child(1)::before { content: "Pos: "; }
+  .FilaRanking span:nth-child(2)::before { content: "Jugador: "; }
+  .FilaRanking span:nth-child(3)::before { content: "País: "; }
+  .FilaRanking span:nth-child(4)::before { content: "Estado: "; }
+
+  /* Bloques informativos */
+  .FuncionamientoRanking {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .FuncionamientoRanking li {
+    font-size: 16px;
+  }
+
+  .BloqueTop16 {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .BloqueTop16 li {
+    font-size: 16px;
+  }
+
+  .RankingRelacion {
+    width: 95%;
+  }
+
+  .RankingRelacion p {
+    font-size: 16px;
+  }
+}

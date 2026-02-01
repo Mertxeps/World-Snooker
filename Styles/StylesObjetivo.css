@@ -1,0 +1,325 @@
+header ul li:nth-of-type(3) {
+	text-decoration: overline;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  margin: 3% 0 2%;
+  color: #0b3d2e; /* verde snooker */
+  letter-spacing: 2px;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 4px;
+  background: #f5c542;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.ContenedorMesa {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.MesaBillar {
+  width: 40%;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease;
+}
+
+.MesaBillar:hover {
+  transform: scale(1.04);
+}
+
+.Justificado {
+  width: 80%;
+  margin: 2% auto;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.fases-juego {
+  width: 80%;
+  margin: 5% auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.fase {
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.fase:hover {
+  transform: translateY(-6px);
+}
+
+.fase h3 {
+  margin-top: 20px;
+  color: #0b3d2e;
+  font-size: 24px;
+}
+
+.fase p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.numero {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: #f5c542;
+  color: #0b3d2e;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.conceptos-importantes {
+  width: 80%;
+  margin: 5% auto;
+  padding: 30px;
+  background: #fffbe6;
+  border-left: 6px solid #f5c542;
+  border-radius: 12px;
+}
+
+.conceptos-importantes h2 {
+  margin-bottom: 15px;
+  color: #0b3d2e;
+  font-size: 24px;
+}
+
+.conceptos-importantes ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.conceptos-importantes li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.desempate {
+  width: 80%;
+  margin: 5% auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #000, #333);
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+}
+
+.desempate h2 {
+  color: #f5c542;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.desempate p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
+}
+
+.ImagenMarcel {
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.ImagenMarcel:hover {
+  transform: scale(1.05);
+}
+
+.ImagenMarcel {
+  width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.ImagenMarcel:hover {
+  transform: scale(1.05);
+}
+
+.ImagenesObjetivo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.ImagenesObjetivo img {
+  width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.ImagenesObjetivoArbitros {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5%;
+  margin: 20px 0;
+}
+
+.ImagenesObjetivoArbitros img {
+  width: 20%;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.ImagenesObjetivoArbitros img:hover {
+  transform: scale(1.05);
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* Para tables */
+@media screen and (max-width: 768px) {
+
+  h1 {
+    font-size: 38px;
+    margin: 5% 0 4%;
+  }
+
+  .Justificado {
+    width: 90%;
+    font-size: 17px;
+  }
+
+  .MesaBillar {
+    width: 65%;
+  }
+
+  .fases-juego {
+    width: 90%;
+    gap: 20px;
+  }
+
+  .fase h3 {
+    font-size: 22px;
+  }
+
+  .fase p {
+    font-size: 17px;
+  }
+
+  .conceptos-importantes,
+  .desempate {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .ImagenMarcel {
+    width: 380px;
+  }
+
+  .ImagenesObjetivoArbitros img {
+    width: 35%;
+  }
+}
+
+/* Para móviles */
+@media screen and (max-width: 480px) {
+
+  h1 {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+
+  h1::after {
+    width: 90px;
+  }
+
+  .Justificado {
+    width: 95%;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .MesaBillar {
+    width: 90%;
+  }
+
+  .fases-juego {
+    width: 95%;
+    gap: 18px;
+  }
+
+  .fase {
+    padding: 20px;
+  }
+
+  .fase h3 {
+    font-size: 20px;
+  }
+
+  .fase p {
+    font-size: 16px;
+  }
+
+  .numero {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .conceptos-importantes,
+  .desempate {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .conceptos-importantes h2,
+  .desempate h2 {
+    font-size: 20px;
+  }
+
+  .conceptos-importantes li,
+  .desempate p {
+    font-size: 16px;
+  }
+
+  .ImagenMarcel {
+    width: 90%;
+  }
+
+  .ImagenesObjetivoArbitros {
+    gap: 20px;
+  }
+
+  .ImagenesObjetivoArbitros img {
+    width: 80%;
+  }
+}

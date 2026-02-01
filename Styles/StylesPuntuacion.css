@@ -1,0 +1,314 @@
+header ul li:nth-of-type(4) {
+	text-decoration: overline;
+}
+
+.Justificado:nth-of-type(4) {
+  background: #fffbe6;
+  border: 2px dashed #f5c542;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  margin: 3% 0 2%;
+  color: #0b3d2e;
+  letter-spacing: 2px;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 4px;
+  background: #f5c542;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.Justificado {
+  width: 80%;
+  margin: 2% auto;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* Bloques horizontales */
+.bloque-accesorio {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 80%;
+  margin: 4% auto;
+}
+
+.bloque-accesorio .texto {
+  flex: 1;
+}
+
+.bloque-accesorio figure,
+.bloque-accesorio img {
+  flex: 1;
+}
+
+.bloque-accesorio img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.bloque-accesorio.invertido {
+  flex-direction: row-reverse;
+}
+
+.bloque-accesorio figure {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.bloque-accesorio figure img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease;
+}
+
+.bloque-accesorio figure img:hover {
+  transform: scale(1.05);
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #444;
+  font-style: italic;
+  text-align: center;
+}
+
+.TizaTaco:hover {
+  transform: scale(1.05);
+}
+
+.cards-puntuacion {
+  width: 80%;
+  margin: 5% auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 25px 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.card p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+}
+
+.roja { border-top: 6px solid #c62828; }
+.amarilla { border-top: 6px solid #fbc02d; }
+.verde { border-top: 6px solid #2e7d32; }
+.marron { border-top: 6px solid #6d4c41; }
+.azul { border-top: 6px solid #1565c0; }
+.rosa { border-top: 6px solid #ec407a; }
+.negra { border-top: 6px solid #000; }
+
+.sabias-que {
+  width: 80%;
+  margin: 5% auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #0b3d2e, #145a32);
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.sabias-que h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #f5c542;
+}
+
+.sabias-que p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.conceptos-clave {
+  width: 85%;
+  margin: 5% auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.concepto {
+  background: #fff;
+  padding: 15px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.concepto:hover {
+  transform: translateY(-6px);
+}
+
+.concepto h4 {
+  margin-bottom: 10px;
+  color: #0b3d2e;
+  font-size: 24px;
+}
+
+.concepto p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* Para tables */
+@media screen and (max-width: 768px) {
+
+  h1 {
+    font-size: 38px;
+    margin: 5% 0 4%;
+  }
+
+  .Justificado {
+    width: 90%;
+    font-size: 17px;
+  }
+
+  .bloque-accesorio {
+    width: 90%;
+    gap: 25px;
+  }
+
+  .cards-puntuacion {
+    width: 90%;
+    gap: 18px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 17px;
+  }
+
+  .sabias-que {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .sabias-que h2 {
+    font-size: 24px;
+  }
+
+  .sabias-que p {
+    font-size: 17px;
+  }
+
+  .conceptos-clave {
+    width: 90%;
+  }
+}
+
+/* Para móviles */
+@media screen and (max-width: 480px) {
+
+  h1 {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+
+  h1::after {
+    width: 90px;
+  }
+
+  .Justificado {
+    width: 95%;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* Bloques con imagen */
+  .bloque-accesorio {
+    flex-direction: column;
+    width: 95%;
+    gap: 20px;
+  }
+
+  .bloque-accesorio.invertido {
+    flex-direction: column;
+  }
+
+  figcaption {
+    font-size: 14px;
+  }
+
+  /* Cards */
+  .cards-puntuacion {
+    width: 95%;
+    gap: 15px;
+  }
+
+  .card {
+    padding: 20px 10px;
+  }
+
+  .card h3 {
+    font-size: 17px;
+  }
+
+  .card p {
+    font-size: 16px;
+  }
+
+  /* Sabías que */
+  .sabias-que {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .sabias-que h2 {
+    font-size: 22px;
+  }
+
+  .sabias-que p {
+    font-size: 16px;
+  }
+
+  /* Conceptos clave */
+  .conceptos-clave {
+    width: 95%;
+    gap: 15px;
+  }
+
+  .concepto h4 {
+    font-size: 20px;
+  }
+
+  .concepto p {
+    font-size: 16px;
+  }
+}

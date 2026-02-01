@@ -1,0 +1,255 @@
+header ul li:nth-of-type(1) {
+	text-decoration: overline;
+}
+
+.bloque-horizontal {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 80%;
+  margin: 3% auto;
+}
+
+.bloque-horizontal p {
+  width: 60%;
+}
+
+.bloque-horizontal img {
+  width: 40%;
+}
+
+.bloque-horizontal.inverso {
+  flex-direction: row-reverse;
+}
+
+.bloque-horizontal figure {
+  width: 35%;
+}
+
+main img {
+  display: block;
+  margin: 2% auto;
+  max-width: 80%;
+  border-radius: 8px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+main img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+#JoeDavis {
+	width: 20%;
+}
+
+figure {
+  margin: 3% auto;
+  text-align: center;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+}
+
+.Demo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+  height: 100px;
+}
+
+.cards-inicio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  width: 80%;
+  margin: 4% auto;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.card h3 {
+  color: var(--verde-snooker);
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.card p {
+  font-size: 18px;
+  color: #333;
+  margin-top: 15px;
+}
+.card a {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: var(--verde-claro);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.timeline {
+  width: 70%;
+  margin: 4% auto;
+  border-left: 4px solid var(--verde-snooker);
+  padding-left: 30px;
+}
+
+.evento {
+  margin-bottom: 25px;
+}
+
+.evento span {
+  font-weight: bold;
+  color: var(--acento);
+  font-size: 20px;
+}
+
+.galeria {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 4% 0;
+}
+
+.galeria img {
+  width: 25%;
+  border-radius: 10px;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  gap: 4%;
+}
+
+.Sabias {
+  width: 60%;
+  margin: 3% auto;
+}
+.Sabias .Justificado {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.Sabias .Justificado {
+  font-size: 19px;
+  background: #f5f5f5;
+  padding: 20px 25px;
+  border-left: 6px solid #0b3d2e;
+  border-radius: 6px;
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* Para tables */
+@media screen and (max-width: 768px) {
+
+  /* Bloques texto + imagen */
+  .bloque-horizontal,
+  .bloque-horizontal.inverso {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .bloque-horizontal p {
+    width: 100%;
+  }
+
+  .bloque-horizontal img,
+  .bloque-horizontal figure {
+    width: 80%;
+  }
+
+  #JoeDavis {
+    width: 40%;
+  }
+
+  /* Timeline */
+  .timeline {
+    width: 85%;
+    padding-left: 20px;
+  }
+
+  /* Galería */
+  .galeria {
+    flex-wrap: wrap;
+  }
+
+  .galeria img {
+    width: 45%;
+  }
+
+  /* Sabías */
+  .Sabias {
+    width: 80%;
+  }
+}
+
+/* Para móviles */
+@media screen and (max-width: 480px) {
+
+  /* Bloques principales */
+  .bloque-horizontal,
+  .bloque-horizontal.inverso {
+    width: 95%;
+    gap: 20px;
+  }
+
+  .bloque-horizontal img,
+  .bloque-horizontal figure {
+    width: 100%;
+  }
+
+  #JoeDavis {
+    width: 60%;
+  }
+
+  /* Galería */
+  .galeria {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .galeria img {
+    width: 90%;
+  }
+
+  /* Timeline */
+  .timeline {
+    width: 90%;
+    padding-left: 15px;
+  }
+
+  .evento span {
+    font-size: 18px;
+  }
+
+  /* Cards */
+  .cards-inicio {
+    width: 90%;
+  }
+
+  /* Sabías */
+  .Sabias {
+    width: 90%;
+  }
+}
+

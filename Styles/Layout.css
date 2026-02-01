@@ -1,0 +1,256 @@
+* {
+	box-sizing: border-box;
+	margin: 0; padding: 0;
+}
+
+:root {
+  --verde-snooker: #0b3d2e;
+  --verde-claro: #1e7f5c;
+  --acento: #f5c542;
+  --texto: #222;
+}
+
+body {
+  font-family: Calibri, sans-serif;
+  color: var(--texto);
+  background-color: #f4f4f4;
+}
+
+body {
+	font-family: Calibri, sans-serif;
+}
+
+.Cabecera {
+	margin: auto;
+	width: 100%;
+}
+
+.BarrasNavegacion {
+    display: flex;
+    justify-content: space-between;
+	margin: auto;
+	width: 100%;
+    padding: 10px 5%;
+    position: relative;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 100%; 
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu li {
+	position: relative;
+    text-align: center;
+	}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+.menu li a:hover {
+	background-color: #F54927;
+	color: yellow;
+	border-radius: 5px;
+}
+
+/* Hamburgesa */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Checkbox oculto */
+#menu-toggle {
+	display: none;
+}
+
+.menu-container .Logo {
+	width: 80px;
+	height: 80px;
+}
+
+.ContenedorPortada {
+  background: linear-gradient(
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.4)
+  ),
+  url("../Images/Mesa billar cenital.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ImagenPortada {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  margin: 3% 0 2%;
+  color: var(--verde-snooker);
+  letter-spacing: 2px;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: var(--acento);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.Justificado {
+  width: 80%;
+  margin: auto;
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.7;
+  padding-top: 2%;
+}
+
+.Justificado:first-of-type {
+  font-size: 19px;
+  background: #f5f5f5;
+  padding: 20px 25px;
+  border-left: 6px solid #0b3d2e;
+  border-radius: 6px;
+}
+
+.Trigger {
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #0ea5a4, #0b7c7b);
+  color: white;
+  border-radius: 30px;
+  font-size: 22px;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.Trigger:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+#Volver {
+    display: flex;
+    justify-content: center;
+    margin: 2% 0;
+    font-size: 18px;
+}
+
+.ContenedorFooter {
+    background-color: black;
+    padding: .5%;
+}
+
+.copy {
+	text-align: center;
+	font-size: 24px;
+	color: white;
+}
+
+.separador-final {
+  width: 120px;
+  height: 4px;
+  background: #f5c542;
+  border: none;
+  margin: 5% auto;
+  border-radius: 2px;
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* para portátiles  */
+/* @media (min-width: 1281px) and (max-width: 1440px) {} */
+
+/* Para tables */
+@media screen and (max-width: 768px) {
+    .hamburger {
+		display: block;
+	}
+
+    /* Ocultamos el menú-container por defecto */
+    .menu-container {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        position: relative;
+        left: 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Cuando se activa la hamburguesa */
+    #menu-toggle:checked + .hamburger + .menu-container {
+        display: flex;
+    }
+
+    /* Logo dentro del menú */
+    .menu-container .logo {
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+    }
+    .menu-container .logo img {
+		width: 80px;
+		height: 80px;
+	}
+
+    /* Menú vertical */
+    .menu {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+	
+    .menu li {
+		text-align: center;
+		padding: 10px 0;
+	}
+	
+    .menu li a {
+		font-size: 18px;
+	}
+}
+
+/* Para móviles */
+@media screen and (max-width: 480px) {
+    .menu-container .logo img {
+		width: 60px;
+		height: 60px;
+	}
+
+    nav {
+        position: sticky;
+        top: 0;
+    }
+
+    .menu-container {
+        position: relative;
+    }
+}

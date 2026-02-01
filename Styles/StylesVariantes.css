@@ -1,0 +1,170 @@
+/* Cards */
+.cards-variantes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  width: 80%;
+  margin: 4% auto;
+}
+
+.card-var {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform .3s;
+}
+
+.card-var h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.card-var p {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #333;
+  font-size: 18px;
+}
+
+.card-var:hover {
+  transform: translateY(-6px);
+}
+
+.carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: auto;
+  /* width: clamp(45%, 60vw, 65%); */
+  width: 50%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5%;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 420px;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.carousel button.prev,
+.carousel button.next {
+  display: none; /* Oculta completamente los botones */
+  /* alternativamente, se puede usar visibility: hidden; */
+}
+
+/* Bloques horizontales */
+.bloque-horizontal {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 80%;
+  margin: 4% auto;
+}
+
+.bloque-horizontal p {
+  width: 60%;
+}
+
+.bloque-horizontal img {
+  width: 40%;
+  border-radius: 10px;
+}
+
+.bloque-horizontal.inverso {
+  flex-direction: row-reverse;
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* Para tables */
+@media screen and (max-width: 768px) {
+  /* Cards */
+  .cards-variantes {
+    width: 90%;
+  }
+
+  /* Bloques horizontales */
+  .bloque-horizontal,
+  .bloque-horizontal.inverso {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .bloque-horizontal p {
+    width: 100%;
+  }
+
+  .bloque-horizontal img {
+    width: 80%;
+  }
+
+  /* Carrusel */
+  .carousel {
+    width: 85%;
+  }
+
+  .carousel-images {
+    height: 320px;
+  }
+
+  /* .bloque-horizontal {
+    flex-direction: column;
+  }
+
+  .bloque-horizontal p,
+  .bloque-horizontal img {
+    width: 100%;
+  } */
+}
+
+/* Para móviles */
+@media screen and (max-width: 480px) {
+  /* Cards */
+  .cards-variantes {
+    width: 95%;
+    gap: 20px;
+  }
+
+  .card-var h3 {
+    font-size: 1.3rem;
+  }
+
+  .card-var p {
+    font-size: 16px;
+  }
+
+  /* Bloques horizontales */
+  .bloque-horizontal,
+  .bloque-horizontal.inverso {
+    width: 95%;
+    gap: 20px;
+  }
+
+  .bloque-horizontal img {
+    width: 100%;
+  }
+
+  /* Carrusel */
+  .carousel {
+    width: 95%;
+  }
+
+  .carousel-images {
+    height: 240px;
+  }
+}

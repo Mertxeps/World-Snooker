@@ -1,0 +1,335 @@
+header ul li:nth-of-type(6) {
+	text-decoration: overline;
+}
+
+.galeria figure {
+  width: 335px;
+  height: 225px;     /* ALTURA FIJA */
+  position: absolute;
+  top: 0;
+  left: 50px;
+  /* overflow: hidden; /* recorta lo que sobresalga */
+}
+
+.galeria figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* CLAVE */
+  display: block;
+}
+
+.galeria figcaption span {
+    font-size: 14px;
+}
+
+.ImagenJugadores {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 25%;
+	border: 2px solid black;
+	border-radius: 3%;
+	margin-top: 2%;
+}
+
+.ImagenJugadores:last-of-type {
+	margin-bottom: 2%;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #444;
+  font-style: italic;
+  text-align: center;
+}
+
+.JugadoresGrid {
+    width: 85%;
+    margin: 4% auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.JugadorCard {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.JugadorCard:hover {
+    transform: translateY(-5px);
+}
+
+.JugadorCard img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--rojo-snooker);
+    margin-top: 2%;
+    font-size: 28px;
+}
+
+.JugadorCard h3 {
+    font-size: 22px;
+    color: var(--verde-snooker);
+}
+
+.JugadorCard .Pais {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.JugadorCard p {
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.ImagenJugador {
+    display: block;
+	  margin-left: auto;
+  	margin-right: auto;
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.EstilosJuego {
+    width: 80%;
+    margin: 4% auto;
+    text-align: center;
+}
+
+.EstilosJuego h2 {
+    margin-bottom: 2%;
+    font-size: 36px;
+}
+
+.EstilosGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.EstiloCard {
+    background: #f5f5f5;
+    padding: 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: antiquewhite;
+}
+
+.EstiloCard h3 {
+    color: var(--rojo-snooker);
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.EstiloCard p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.TimelineJugadores {
+    width: 60%;
+    margin: 4% auto;
+    padding: 20px;
+    background-color: #cfcaca;
+    border-radius: 10px;
+}
+
+.Timeline {
+    background-color: var(--rojo-snooker);
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 2%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.Evento {
+    margin: 2% 0;
+    font-size: 22px;
+}
+
+.bloque-horizontal {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 80%;
+  margin: 3% auto;
+}
+
+.bloque-horizontal p {
+  width: 60%;
+}
+
+.bloque-horizontal img {
+  width: 40%;
+}
+
+.bloque-horizontal.inverso {
+  flex-direction: row-reverse;
+}
+
+.Curiosidades {
+    width: 70%;
+    margin: 4% auto;
+    background: #fafafa;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.Curiosidades h2 {
+    text-align: center;
+    color: var(--rojo-snooker);
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.Curiosidades ul {
+    list-style: none;
+    font-size: 18px;
+}
+
+.Curiosidades li {
+    margin: 12px 0;
+    font-size: 18px;
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* Para tables */
+@media screen and (max-width: 768px) {
+
+    h1, h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .JugadoresGrid {
+        grid-template-columns: 1fr;
+        width: 95%;
+        gap: 20px;
+    }
+
+    .JugadorCard img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .ImagenJugadores, .ImagenJugador {
+        width: 80%;
+        margin: 1.5% auto;
+    }
+
+    .BloqueTextoImagen {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .bloque-horizontal,
+    .bloque-horizontal.inverso {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bloque-horizontal p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .bloque-horizontal img {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .EstilosGrid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .TimelineJugadores {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .Curiosidades {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .galeria figure {
+        width: 220px;
+        height: 150px;
+        left: 10px;
+    }
+}
+
+/* Para móviles */
+@media screen and (max-width: 480px) {
+
+    h1, h2 {
+        font-size: 20px;
+    }
+
+    .JugadorCard img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .ImagenJugadores, .ImagenJugador {
+        width: 95%;
+    }
+
+    .BloqueTextoImagen {
+        gap: 10px;
+    }
+
+    .bloque-horizontal,
+    .bloque-horizontal.inverso {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .bloque-horizontal p {
+        font-size: 14px;
+    }
+
+    .bloque-horizontal img {
+        width: 80%;
+    }
+
+    .Curiosidades {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .TimelineJugadores {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .galeria figure {
+        width: 180px;
+        height: 120px;
+        left: 5px;
+    }
+}

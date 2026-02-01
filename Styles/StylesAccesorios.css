@@ -1,0 +1,231 @@
+header ul li:nth-of-type(2) {
+	text-decoration: overline;
+}
+
+.MaterialYAcesorios {
+  text-align: center;
+  font-size: 48px;
+  margin: 3% 0 2%;
+  color: #0b3d2e; /* verde snooker */
+  letter-spacing: 2px;
+}
+
+.MaterialYAcesorios::after {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 4px;
+  background: #f5c542;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.MaterialBasico {
+  display: block;
+  /* margin: 3% auto; */
+  /* width: 30%; */
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.MaterialBasico:hover {
+  transform: scale(1.05);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+}
+
+figure {
+  margin: 4% auto;
+  text-align: center;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #444;
+}
+
+figcaption {
+  font-style: italic;
+}
+
+.Justificado {
+  width: 80%;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.75;
+  padding-top: 2%;
+}
+
+.bloque-accesorio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4%;
+  width: 85%;
+  margin: 4% auto;
+}
+
+.bloque-accesorio {
+  padding-bottom: 3%;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.bloque-accesorio {
+  transition: transform 0.3s ease;
+}
+
+.bloque-accesorio:hover {
+  transform: translateY(-4px);
+}
+
+.bloque-accesorio:last-of-type {
+  border-bottom: none;
+}
+
+.bloque-accesorio .texto {
+  flex: 1;
+}
+
+.bloque-accesorio figure {
+  flex: 1;
+  margin: 0;
+}
+
+.bloque-accesorio.invertido {
+  flex-direction: row-reverse;
+}
+
+.Justificado strong {
+  color: #0b3d2e;
+}
+
+.dato {
+  background: #f5c54233;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.extra-accesorios {
+  width: 70%;
+  margin: 4% auto;
+  background: #f7f7f7;
+  padding: 3%;
+  border-radius: 10px;
+}
+
+.extra-accesorios h2 {
+  text-align: center;
+  color: #0b3d2e;
+  font-size: 36px;
+}
+
+.extra-accesorios ul {
+  list-style: none;
+  padding: 0;
+}
+
+.extra-accesorios li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.extra-accesorios ul {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.extra-accesorios li {
+  font-size: clamp(18px, 2.2vw, 22px);
+  line-height: 1.6;
+}
+
+.extra-accesorios li {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* Para tables */
+@media screen and (max-width: 768px) {
+
+  /* Título */
+  .MaterialYAcesorios {
+    font-size: 38px;
+  }
+
+  /* Bloques accesorio */
+  .bloque-accesorio,
+  .bloque-accesorio.invertido {
+    flex-direction: column;
+    width: 90%;
+    gap: 30px;
+  }
+
+  .bloque-accesorio figure {
+    width: 100%;
+  }
+
+  /* Texto */
+  .Justificado {
+    width: 90%;
+    font-size: 17px;
+  }
+
+  /* Extra accesorios */
+  .extra-accesorios {
+    width: 85%;
+  }
+
+  .extra-accesorios h2 {
+    font-size: 30px;
+  }
+}
+
+/* Para móviles */
+@media screen and (max-width: 480px) {
+
+  /* Título */
+  .MaterialYAcesorios {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+
+  /* Bloques accesorio */
+  .bloque-accesorio,
+  .bloque-accesorio.invertido {
+    width: 95%;
+    gap: 25px;
+  }
+
+  /* Imágenes */
+  .MaterialBasico {
+    max-width: 100%;
+  }
+
+  /* Texto */
+  .Justificado {
+    width: 95%;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Extra accesorios */
+  .extra-accesorios {
+    width: 95%;
+    padding: 5%;
+  }
+
+  .extra-accesorios h2 {
+    font-size: 26px;
+  }
+
+  .extra-accesorios li {
+    font-size: 16px;
+  }
+}
