@@ -11,11 +11,11 @@ h2 {
 }
 
 .RankingGrid {
-  width: 80%;
+  width: 90%;
   margin: 3% auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+  gap: 10px;
 }
 
 .RankingCard {
@@ -344,4 +344,5 @@ p:last-of-type {
     font-size: 16px;
   }
 }
+
 
