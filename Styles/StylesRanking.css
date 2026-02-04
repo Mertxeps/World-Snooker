@@ -13,6 +13,7 @@ h2 {
 .RankingGrid {
   width: 80%;
   margin: 3% auto;
+  /* margin: 3% auto; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 50px;
