@@ -15,7 +15,7 @@ h2 {
   margin: 3% auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 35px;
+  gap: 50px;
 }
 
 .RankingCard {
@@ -38,7 +38,7 @@ h2 {
   right: -15px;
   background: var(--verde-snooker);
   color: white;
-  width: 30px;
+  width: 40px;
   height: 40px;
   border-radius: 50%;
   font-size: 20px;
